@@ -6,7 +6,7 @@
     <title>Krisztina's To-Do List</title>
 
     <!-- To fix favicon.ico console error -->
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="#" />
 
     <!-- Normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
@@ -21,13 +21,27 @@
     </header>
 
     <main>
-        <form action="#" id="add-task-form">Add Task</form>
+        <form action="#" id="add-task-form">
+            <label for="taskName">New task:</label>
+            <input type="text" id="taskName" name="name">
 
-        <section id="active-to-do-list">Active To-Dos</section>
+            <button id="add-task-button" type="submit">Add Task</button>
+        </form>
+        <section>Pending Tasks
+            <ul id="pending-task-list-area"></ul>
+        </section>
 
-        <section id="completed-to-do-list">Completed To-Dos</section>
+        <section>Active Tasks
+            <ul id="active-task-list-area"></ul>
+        </section>
 
-        <section id="interesting-facts">Interesting Facts</section>
+        <section>Completed Tasks
+            <ul id="completed-task-list-area"></ul>
+        </section>
+
+        <section>Interesting Facts
+            <ul id="interesting-facts-area"></ul>
+        </section>
     </main>
     
     <footer>Copyright &copy; 2020 by Krisztina Pap</footer>
