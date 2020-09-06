@@ -8,6 +8,9 @@ const activeTaskArea = document.getElementById( "active-task-list-area" );
 const completedTaskArea = document.getElementById( "completed-task-list-area" );
 const interestingFactsArea = document.getElementById( "interesting-facts-area" );
 const deleteButtons = document.querySelectorAll( ".deleteButton" );
+const createdDate = "";
+let startedDate = "";
+let completedDate = "";
 
 // Event listener on add button
 addTaskButton.addEventListener( "click", addTask );
@@ -19,10 +22,16 @@ function addTask( event ) {
     const newLI = document.createElement( "LI" );
     newLI.textContent = userInput;
 
+    // Add IsCompleted checkbox
+    const newCheckbox = document.createElement( "INPUT");
+    newCheckbox.type = "checkbox";
+    newLI.prepend( newCheckbox );
+
     // Add "start" button
     const newStartButton = document.createElement( "BUTTON" );
     newStartButton.textContent = "Start";
     newStartButton.classList.add( "startButton" );
+    newStartButton.addEventListener( "click", startTask );
     newLI.append( newStartButton );
 
     // Add "delete" button
@@ -36,6 +45,9 @@ function addTask( event ) {
 }; 
 
 //      startTask()
+function startTask( event ) {
+  activeTaskArea.appendChild( this.parentElement );
+}
 
 //      completeTask()
 
