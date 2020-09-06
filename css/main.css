@@ -13,7 +13,7 @@ section {
     padding: 0.3rem;
     margin: 0.3rem;
     margin-top: 1.2rem;
-    min-height: 50vh;
+    min-height: 60vh;
     min-width: 360px;
     border: 2px black solid;
     border-radius: 15px;
@@ -48,8 +48,10 @@ body {
 }
 
 footer {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    position: fixed;
+    bottom: 1rem;
+    width: 100%;
+    margin: 1rem auto;
     color: whitesmoke;
     font-size: 0.8rem;
 }
@@ -119,10 +121,15 @@ li {
     position: relative;
 }
 
+#add-task-button {
+    color: whitesmoke;
+}
+
 #clear-completed-button {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+    color: whitesmoke;
 }
 
 #pending-task-section {
@@ -162,9 +169,5 @@ li {
     }
     section {
         width: 30%;
-    }
-    #interesting-facts-section {
-        width: 60%;
-    }
-    
+    }    
 }
