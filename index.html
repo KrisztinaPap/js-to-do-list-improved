@@ -8,6 +8,9 @@
     <!-- Normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="css/main.css">
 
     <script src="js/scripts.js" defer></script>
@@ -22,24 +25,32 @@
             <label for="taskName">New task:</label>
             <input type="text" id="taskName" name="name">
 
-            <button id="add-task-button" type="submit">Add Task</button>
+            <button id="add-task-button" type="submit" class="green button">Add Task</button>
         </form>
-        <section>Pending Tasks
-            <ul id="pending-task-list-area"></ul>
-        </section>
-
-        <section>Active Tasks
-            <ul id="active-task-list-area"></ul>
-        </section>
-
-        <section>Completed Tasks
-            <ul id="completed-task-list-area"></ul>
-            <button id="clear-completed-button" type="submit">Clear Completed Tasks</button>
-        </section>
-
-        <section>Interesting Facts
-            <ul id="interesting-facts-area"></ul>
-        </section>
+        <div class="flex-container">
+            <section id="pending-task-section">
+                <h2>Pending Tasks</h2>
+                <ul id="pending-task-list-area"></ul>
+            </section>
+    
+            <section id="active-task-section">
+                <h2>Active Tasks</h2>
+                <ul id="active-task-list-area"></ul>
+            </section>
+    
+            <section id="completed-task-section">
+                <h2>Completed Tasks</h2>
+                <ul id="completed-task-list-area"></ul>
+                <button id="clear-completed-button" type="submit" class="green button">Clear Completed Tasks</button>
+            </section>
+        </div>
+       
+        <div class="flex-container">
+            <section id="interesting-facts-section">
+                <h2>Interesting Facts</h2>
+                <ul id="interesting-facts-area"></ul>
+            </section>
+        </div>
     </main>
     
     <footer>Copyright &copy; 2020 by Krisztina Pap</footer>

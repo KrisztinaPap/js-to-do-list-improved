@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+section {
+    background-color: whitesmoke;
+    opacity: 0.7;
+    padding: 0.3rem;
+    margin: 0.3rem;
+    margin-top: 1.2rem;
+    min-height: 50vh;
+    min-width: 360px;
+    border: 2px black solid;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    padding-top: 1rem;
+
+} 
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6rem;
+    padding-top: 1.6rem;
+    padding-bottom: 2rem;
+} 
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(".././img/mountain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+    font-size: 0.8rem;
+}
+
+form input {
+    margin-top: 10px;
+    text-align: left;
+}
+
+form label {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.yellow {
+    background-color: gold;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+input {
+    margin: 10px;
+}
+
+.LIText {
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0rem;
+    text-align: left;
+    background-color: whitesmoke;
+}
+
+.button {
+    display: inline-block;
+    padding: 0 16px;
+}
+.button:hover,
+.button:focus {
+    box-shadow: 10px 10px 5px grey;
+}
+
+.deleteButton {
+    position: absolute;
+    right: 0.5rem;
+}
+
+.startButton {
+    position: absolute;
+    right: 5rem;
+}
+
+#completed-task-section {
+    position: relative;
+}
+
+#clear-completed-button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+#pending-task-section {
+    position: relative;
+}
+
+#active-task-section {
+    position: relative;
+}
+
+@media screen and ( min-width: 640px ) {
+    .LIText {
+        padding-left: 1rem;
+        padding-right: 2rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+    }
+    .deleteButton {
+        position: absolute;
+        margin-top: 0.5rem;
+        right: 2rem;
+    }
+    .startButton {
+        position: absolute;
+        margin-top: 0.5rem;
+        right: 6rem;
+    }
+}
+
+@media screen and ( min-width: 1400px ) {
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+    section {
+        width: 30%;
+    }
+    #interesting-facts-section {
+        width: 60%;
+    }
+    
+}

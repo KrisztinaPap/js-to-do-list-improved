@@ -23,19 +23,24 @@ function addTask( event ) {
     event.preventDefault();
     const userInput = document.getElementById( "taskName" ).value;
     const newLI = document.createElement( "LI" );
-    newLI.textContent = userInput;
+  
+    // Add text to li
+    const newTextContent = document.createElement( "SPAN" );
+    newTextContent.textContent = userInput;
+    newTextContent.classList.add( "LIText" );
+    newLI.appendChild( newTextContent );
 
     // Add "start" button
     const newStartButton = document.createElement( "BUTTON" );
     newStartButton.textContent = "Start";
-    newStartButton.classList.add( "startButton" );
+    newStartButton.classList.add( "startButton", "yellow", "button" );
     newStartButton.addEventListener( "click", startTask );
     newLI.append( newStartButton );
 
     // Add "delete" button
     const newDeleteButton = document.createElement( "BUTTON" );
     newDeleteButton.textContent = "Delete";
-    newDeleteButton.classList.add( "deleteButton" );
+    newDeleteButton.classList.add( "deleteButton", "red", "button" );
     newDeleteButton.addEventListener( "click", deleteTask );
     newLI.append( newDeleteButton );
 
