@@ -22,11 +22,6 @@ function addTask( event ) {
     const newLI = document.createElement( "LI" );
     newLI.textContent = userInput;
 
-    // Add IsCompleted checkbox
-    const newCheckbox = document.createElement( "INPUT");
-    newCheckbox.type = "checkbox";
-    newLI.prepend( newCheckbox );
-
     // Add "start" button
     const newStartButton = document.createElement( "BUTTON" );
     newStartButton.textContent = "Start";
@@ -47,9 +42,27 @@ function addTask( event ) {
 //      startTask()
 function startTask( event ) {
   activeTaskArea.appendChild( this.parentElement );
+
+  // Add IsCompleted checkbox
+  const newCheckbox = document.createElement( "INPUT");
+  newCheckbox.type = "checkbox";
+  
+  newCheckbox.addEventListener( "change", completeTask );
+  this.parentElement.prepend( newCheckbox );
 }
 
 //      completeTask()
+function completeTask( event ) {
+  console.log( this.parentElement.checked );
+  if ( this.checked )
+    {
+      completedTaskArea.appendChild( this.parentElement ); 
+    } 
+  else {
+      activeTaskArea.appendChild( this.parentElement );
+    }
+}
+
 
 //      deleteTask()
 function deleteTask( event ) {
