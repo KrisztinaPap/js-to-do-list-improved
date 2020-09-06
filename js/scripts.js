@@ -3,17 +3,20 @@
 // Declare variables
 const addTaskForm = document.getElementById( "add-task-form" );
 const addTaskButton = document.getElementById( "add-task-button" );
+const clearListButton = document.getElementById( "clear-completed-button" );
 const pendingTaskArea = document.getElementById( "pending-task-list-area" );
 const activeTaskArea = document.getElementById( "active-task-list-area" );
 const completedTaskArea = document.getElementById( "completed-task-list-area" );
 const interestingFactsArea = document.getElementById( "interesting-facts-area" );
-const deleteButtons = document.querySelectorAll( ".deleteButton" );
 const createdDate = "";
 let startedDate = "";
 let completedDate = "";
 
 // Event listener on add button
 addTaskButton.addEventListener( "click", addTask );
+
+// Event listener on add button
+clearListButton.addEventListener( "click", clearList );
 
 //      addTask()
 function addTask( event ) {
@@ -53,7 +56,6 @@ function startTask( event ) {
 
 //      completeTask()
 function completeTask( event ) {
-  console.log( this.parentElement.checked );
   if ( this.checked )
     {
       completedTaskArea.appendChild( this.parentElement ); 
@@ -63,11 +65,17 @@ function completeTask( event ) {
     }
 }
 
-
 //      deleteTask()
 function deleteTask( event ) {
   this.parentElement.remove();
 }
 
-
 //      clearList()
+function clearList() {
+  let allChecked = document.querySelectorAll("ul li");
+  for ( let i = 0; i < allChecked.length; i++ ) {
+    if ( allChecked[i].firstChild.checked ) {
+      allChecked[i].remove();
+    }
+  }
+}
