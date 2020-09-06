@@ -45,13 +45,15 @@ function addTask( event ) {
 //      startTask()
 function startTask( event ) {
   activeTaskArea.appendChild( this.parentElement );
-
+  //const thisStartButton = document.querySelector("");
+  
   // Add IsCompleted checkbox
   const newCheckbox = document.createElement( "INPUT");
   newCheckbox.type = "checkbox";
   
   newCheckbox.addEventListener( "change", completeTask );
   this.parentElement.prepend( newCheckbox );
+  this.remove();
 }
 
 //      completeTask()
