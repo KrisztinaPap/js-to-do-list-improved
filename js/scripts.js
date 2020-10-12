@@ -7,7 +7,6 @@ const clearListButton = document.getElementById( "clear-completed-button" );
 const pendingTaskArea = document.getElementById( "pending-task-list-area" );
 const activeTaskArea = document.getElementById( "active-task-list-area" );
 const completedTaskArea = document.getElementById( "completed-task-list-area" );
-const interestingFactsArea = document.getElementById( "interesting-facts-area" );
 const createdDate = "";
 let startedDate = "";
 let completedDate = "";
@@ -47,9 +46,15 @@ function addTask( event ) {
       newLI.append( newDeleteButton );
 
       pendingTaskArea.appendChild( newLI );
-  }
 
+      addTaskForm.reset();
+  }
 }; 
+
+//      focus on user input field after adding a task
+function focusUserInput() { 
+    document.getElementById("taskName").focus(); 
+} 
 
 //      startTask()
 function startTask( event ) {
