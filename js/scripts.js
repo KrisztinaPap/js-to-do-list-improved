@@ -90,3 +90,11 @@ function clearList() {
         }
     }
 }
+
+//    Reset To-Do App
+function resetApp() {
+  let allTasks = document.querySelectorAll("li");
+  for ( let i = 0; i < allTasks.length; i++ ){
+    allTasks[i].remove();
+  }
+}
